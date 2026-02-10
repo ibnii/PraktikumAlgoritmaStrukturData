@@ -10,7 +10,7 @@ class PraktikumPemilihan {
         double uts = score(input, "UTS");
         double uas = score(input, "UAS");
 
-        double nilaiAkhir = (0.20 * tugas) + (0.20 * kuis) + (0.30 * uts) + (0.40 * uas);
+        double nilaiAkhir = (0.20 * tugas) + (0.20 * kuis) + (0.30 * uts) + (0.30 * uas);
 
         System.out.println("Nilai Akhir\t: " + nilaiAkhir);
         System.out.println("Nilai Huruf\t: " + konversiNilai(nilaiAkhir));
