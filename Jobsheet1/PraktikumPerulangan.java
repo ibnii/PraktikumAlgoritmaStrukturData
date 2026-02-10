@@ -5,14 +5,10 @@ public class PraktikumPerulangan {
         Scanner sc = new Scanner(System.in);
         System.out.print("NIM\t: ");
         long nim = sc.nextLong();
-
         int n = (int) (nim % 100);
-        System.out.println(n);
-
         if (n < 10) {
             n += 10;
         }
-
         System.out.println("Nilai n = " + n);
 
         for (int i = 1; i <= n; i++) {
