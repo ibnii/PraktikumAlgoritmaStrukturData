@@ -1,6 +1,6 @@
 package Jobsheet2;
 
-public class Mahasiswa {
+public class Mahasiswa13 {
     String nim, nama, kelas;
     double ipk;
 
