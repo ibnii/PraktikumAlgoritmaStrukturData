@@ -29,13 +29,40 @@ public class MahasiswaBerprestasi13 {
 
     int sequentialSearching(double cari) {
         int posisi = -1;
-        for (int j = 0; j < listMhs.length; j++) {
+        for (int j = 0; j < idx; j++) {
             if (listMhs[j].ipk == cari) {
                 posisi = j;
                 break;
             }
         }
         return posisi;
+    }
+
+    int findBinarySearch(double cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari == listMhs[mid].ipk) {
+                return (mid);
+            } else if (listMhs[mid].ipk > cari) {
+                return findBinarySearch(cari, left, mid - 1);
+            } else {
+                return findBinarySearch(cari, mid + 1, right);
+            }
+        }
+        return -1;
+    }
+
+    void bubbleSort() {
+        for (int i = 0; i < idx - 1; i++) {
+            for (int j = 1; j < idx - i; j++) {
+                if (listMhs[j - 1].ipk > listMhs[j].ipk) {
+                    Mahasiswa13 temp = listMhs[j];
+                    listMhs[j] = listMhs[j - 1];
+                    listMhs[j - 1] = temp;
+                }
+            }
+        }
     }
 
     void tampilPosisi(double x, int pos) {
