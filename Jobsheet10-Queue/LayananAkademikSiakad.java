@@ -47,6 +47,9 @@ public class LayananAkademikSiakad {
                 case 5:
                     System.out.println("Jumlah mahasiswa dalam antrian: " + antrian.size);
                     break;
+                case 6:
+                    antrian.lihatAkhir();
+                    break;
                 case 0:
                     System.out.println("Keluar dari program...");
                     break;
